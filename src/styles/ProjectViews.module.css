@@ -1,0 +1,76 @@
+/* ProjectViews: grid templates for the three layouts + the list preview. */
+
+.views {
+  position: relative;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 48px;
+  align-items: start;
+}
+
+.col {
+  display: grid;
+  gap: 72px;
+}
+
+.columns .col:nth-child(2) {
+  margin-top: 80px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 56px 48px;
+}
+
+.rows {
+  border-top: 1px solid var(--line);
+}
+
+.preview {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 500;
+  width: 280px;
+  height: 360px;
+  margin: -180px 0 0 -140px;
+  overflow: hidden;
+  pointer-events: none;
+  background: var(--bg-2);
+}
+
+.previewImg {
+  position: absolute;
+  inset: 0;
+}
+
+.previewImg img {
+  object-fit: cover;
+}
+
+@media (max-width: 1023px) {
+  .columns {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .columns,
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  /* Cards keep their original order via `order` when the columns dissolve. */
+  .col {
+    display: contents;
+  }
+
+  .columns .col:nth-child(2) {
+    margin-top: 0;
+  }
+}

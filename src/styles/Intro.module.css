@@ -1,0 +1,34 @@
+/* Intro: paragraph left, buttons bottom-right, hairline on top. */
+
+.intro {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 28px;
+  margin-top: clamp(32px, 5vw, 64px);
+  padding-top: clamp(20px, 2vw, 28px);
+}
+
+.rule {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--line);
+  transform-origin: left;
+}
+
+.lead {
+  max-width: 560px;
+  font-size: var(--fs-body);
+  line-height: 1.45;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}

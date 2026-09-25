@@ -1,0 +1,31 @@
+/* PinnedPortrait: layered wrappers so drop, drag, sway and tilt never fight. */
+
+.drop {
+  position: relative;
+  z-index: 5; /* stays above the intro text while dragged */
+  width: 100%;
+}
+
+.drag {
+  touch-action: pan-y pinch-zoom;
+  user-select: none;
+}
+
+.sway {
+  perspective: 800px;
+}
+
+.card {
+  border-radius: 6px;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-user-drag: none;
+  box-shadow: var(--shadow);
+}

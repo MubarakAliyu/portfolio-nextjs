@@ -1,0 +1,58 @@
+/* WorkSection: header row, divider, views and the "View all" link. */
+
+.section {
+  padding-top: clamp(96px, 12vw, 176px);
+  padding-bottom: clamp(64px, 8vw, 120px);
+}
+
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.rule {
+  display: block;
+  height: 1px;
+  margin-bottom: clamp(24px, 3vw, 40px);
+  background: var(--line-2);
+  transform-origin: left;
+}
+
+.more {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: clamp(96px, 9vw, 140px);
+}
+
+.all {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 4px;
+  font-size: 15px;
+  font-weight: 500;
+  background-image: linear-gradient(var(--accent), var(--accent));
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 1px;
+  transition:
+    background-size 0.45s var(--ease),
+    color 0.3s var(--ease);
+}
+
+.all span {
+  transition: transform 0.45s var(--ease);
+}
+
+.all:hover {
+  color: var(--accent-text);
+  background-size: 100% 1px;
+}
+
+.all:hover span {
+  transform: translateX(6px);
+}

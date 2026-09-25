@@ -1,0 +1,101 @@
+/* Hero: fills the first screen and sits the name + intro at the bottom. */
+
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-top: 150px;
+  padding-bottom: 34px;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+}
+
+.mark {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  align-items: center;
+  gap: var(--gutter);
+}
+
+.name {
+  font-family: var(--font-display), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: var(--fs-display-xl);
+  line-height: 0.92;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.line {
+  display: block;
+  white-space: nowrap;
+}
+
+/* Extra headroom so the 6px hover nudge isn't clipped by the mask. */
+.mask {
+  display: inline-block;
+  overflow: hidden;
+  padding-top: 0.08em;
+  margin-top: -0.08em;
+  vertical-align: top;
+}
+
+.letter {
+  display: inline-block;
+}
+
+.nudge {
+  display: inline-block;
+  transition:
+    transform 0.3s var(--ease),
+    color 0.3s var(--ease);
+}
+
+.nudge:hover {
+  transform: translateY(-6px);
+  color: var(--accent);
+}
+
+.reg {
+  display: inline-block;
+  margin-left: 0.06em;
+  font-family: var(--font-sans), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.18em;
+  font-weight: 700;
+  line-height: 1;
+  vertical-align: super;
+  color: var(--accent);
+}
+
+.portrait {
+  justify-self: start;
+  width: clamp(200px, 21vw, 320px);
+  margin-left: clamp(0px, 3vw, 64px);
+}
+
+@media (max-width: 767px) {
+  .hero {
+    padding-top: 120px;
+  }
+
+  .mark {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .name {
+    font-size: 19vw;
+  }
+
+  .portrait {
+    justify-self: end;
+    width: 70%;
+    max-width: 320px;
+    margin: 0 4% 0 0;
+  }
+}
