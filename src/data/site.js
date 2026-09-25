@@ -10,7 +10,7 @@ export const site = {
   clockLabel: "Sokoto",
   email: "aliyumubarak.ui@gmail.com",
   cv: "/cv/aliyu-mubarak-cv.pdf",
-  url: "https://mubarak-portfolio.vercel.app", // TODO: replace with the live Vercel URL after deploy
+  url: "https://portfolio-nextjs-psi-liart.vercel.app",
   description:
     "Aliyu Mubarak is a product designer and software engineer in Sokoto, Nigeria, designing and building products people can actually use.",
   intro: {

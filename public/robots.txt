@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://mubarak-portfolio.vercel.app/sitemap.xml
+Sitemap: https://portfolio-nextjs-psi-liart.vercel.app/sitemap.xml
