@@ -1,0 +1,21 @@
+/* CaseStudy: chapter rail on the left, sections on the right. */
+
+.body {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: clamp(32px, 4vw, 64px);
+  padding-top: clamp(56px, 7vw, 110px);
+}
+
+.content {
+  min-width: 0;
+}
+
+@media (max-width: 1023px) {
+  .body {
+    /* minmax(0, …) so the chapter pill strip scrolls instead of widening the page */
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+    padding-top: 0;
+  }
+}

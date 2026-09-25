@@ -1,0 +1,5 @@
+/* ScrollWords: paragraphs spaced like body copy. */
+
+.block p + p {
+  margin-top: 1.1em;
+}

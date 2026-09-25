@@ -1,0 +1,129 @@
+/* Inspirations: quote rotator, grouped rows and the cursor-following photo. */
+
+.section {
+  padding-block: clamp(80px, 10vw, 150px);
+}
+
+.quote {
+  min-height: clamp(160px, 16vw, 220px);
+  margin-top: clamp(32px, 4vw, 56px);
+}
+
+.quoteText {
+  max-width: 24ch;
+  font-family: var(--font-display), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: clamp(28px, 2.8vw, 40px);
+  line-height: 1.15;
+}
+
+.quote figcaption {
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.groups {
+  display: grid;
+  gap: clamp(32px, 4vw, 48px);
+  margin-top: clamp(40px, 5vw, 72px);
+}
+
+.groupTitle {
+  margin-bottom: 8px;
+  font-size: var(--fs-meta);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.row {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr) auto;
+  gap: 24px;
+  align-items: baseline;
+  padding-block: 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.row:first-child {
+  border-top: 1px solid var(--line);
+}
+
+.name {
+  font-size: clamp(18px, 1.6vw, 22px);
+  font-weight: 500;
+  transition:
+    color 0.4s var(--ease),
+    transform 0.5s var(--ease);
+}
+
+.note {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.tag {
+  padding: 3px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.underline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s var(--ease);
+}
+
+.row:hover .name {
+  color: var(--accent-text);
+  transform: translateX(8px);
+}
+
+.row:hover .underline {
+  transform: scaleX(1);
+}
+
+.float {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 500;
+  width: 260px;
+  height: 320px;
+  margin: -160px 0 0 40px;
+  overflow: hidden;
+  pointer-events: none;
+  background: var(--bg-2);
+  box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.6);
+}
+
+.floatImg {
+  position: absolute;
+  inset: 0;
+}
+
+.floatImg img {
+  object-fit: cover;
+}
+
+@media (max-width: 767px) {
+  .row {
+    grid-template-columns: 1fr auto;
+    gap: 6px 12px;
+  }
+
+  .note {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+}

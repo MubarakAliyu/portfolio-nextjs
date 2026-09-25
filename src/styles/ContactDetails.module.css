@@ -1,0 +1,97 @@
+/* ContactDetails: label/value rows and sweeping social links. */
+
+.details {
+  display: grid;
+  gap: 40px;
+  align-content: start;
+}
+
+.row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 130px minmax(0, 1fr);
+  gap: 16px;
+  padding-block: 16px;
+}
+
+.rule {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 1px;
+  background: var(--line);
+  transform-origin: left;
+}
+
+.row dt {
+  font-size: var(--fs-meta);
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.row dd {
+  font-size: 15px;
+}
+
+.row dd a:hover {
+  color: var(--accent-text);
+}
+
+.clock {
+  font-size: 15px;
+  letter-spacing: 0;
+  color: var(--text);
+}
+
+.socialRow {
+  position: relative;
+}
+
+.social {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 56px;
+  padding: 0 12px;
+  overflow: hidden;
+  isolation: isolate;
+  font-size: clamp(18px, 1.6vw, 22px);
+  font-weight: 500;
+  transition: color 0.4s var(--ease);
+}
+
+.social::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--text);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s var(--ease);
+}
+
+.social:hover,
+.social:focus-visible {
+  color: var(--bg);
+}
+
+.social:hover::before,
+.social:focus-visible::before {
+  transform: scaleX(1);
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.45s var(--ease);
+}
+
+.social:hover .arrow {
+  transform: rotate(45deg);
+}
+
+.socials li:last-child {
+  border-bottom: 1px solid var(--line);
+}

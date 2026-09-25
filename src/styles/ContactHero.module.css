@@ -1,0 +1,104 @@
+/* ContactHero: giant repelling title, availability pill and time-aware line. */
+
+.hero {
+  padding-top: clamp(140px, 16vw, 220px);
+  padding-bottom: clamp(32px, 4vw, 56px);
+}
+
+.eyebrow {
+  margin-bottom: 20px;
+  font-size: var(--fs-meta);
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.title {
+  font-family: var(--font-display), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: var(--fs-display-l);
+  line-height: 0.96;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.word {
+  display: inline-block;
+  white-space: nowrap;
+  margin-right: 0.22em;
+}
+
+.mask {
+  display: inline-block;
+  overflow: hidden;
+  padding-top: 0.06em;
+  margin-top: -0.06em;
+  vertical-align: top;
+}
+
+/* Once revealed, letters may be pushed outside their masks. */
+.revealed .mask {
+  overflow: visible;
+}
+
+.letter,
+.push {
+  display: inline-block;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 28px;
+  margin-top: clamp(24px, 3vw, 40px);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 16px;
+  border: 1px solid var(--line-2);
+  border-radius: 999px;
+  font-size: var(--fs-ui);
+  font-weight: 500;
+}
+
+.dot {
+  position: relative;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #3ecf6e;
+}
+
+.dot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid #3ecf6e;
+  animation: ping 1.6s var(--ease) infinite;
+}
+
+@keyframes ping {
+  from {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  to {
+    transform: scale(3.2);
+    opacity: 0;
+  }
+}
+
+.status {
+  font-size: 15px;
+  color: var(--muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dot::after {
+    animation: none;
+  }
+}

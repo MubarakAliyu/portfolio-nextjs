@@ -1,0 +1,270 @@
+/* ContactForm: underline fields with floating labels, pills, and the morphing submit. */
+
+.form {
+  display: grid;
+  gap: 36px;
+}
+
+.pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.field {
+  position: relative;
+  padding-top: 22px;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  padding: 10px 0 12px;
+  border-bottom: 1px solid var(--line-2);
+  background: transparent;
+  font-size: 18px;
+  outline: none;
+  resize: none;
+  overflow: hidden;
+}
+
+.input:focus-visible {
+  outline: none;
+}
+
+.label {
+  position: absolute;
+  left: 0;
+  top: 32px;
+  font-size: 18px;
+  color: var(--muted);
+  pointer-events: none;
+  transform-origin: left top;
+  transition:
+    transform 0.4s var(--ease),
+    color 0.3s var(--ease);
+}
+
+/* Float the label up when focused or filled. */
+.field:focus-within .label,
+.filled .label,
+.input:not(:placeholder-shown) + .label {
+  transform: translateY(-28px) scale(0.72);
+}
+
+.field:focus-within .label {
+  color: var(--accent-text);
+}
+
+.line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% - 25px);
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s var(--ease);
+  pointer-events: none;
+}
+
+.field:focus-within .line {
+  transform: scaleX(1);
+}
+
+.invalid .input {
+  border-bottom-color: var(--accent);
+}
+
+.errorMask {
+  display: block;
+  height: 24px;
+  overflow: hidden;
+}
+
+.error {
+  display: block;
+  padding-top: 6px;
+  font-size: 13px;
+  color: var(--accent-text);
+}
+
+.group {
+  border: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.legend {
+  margin-bottom: 12px;
+  font-size: var(--fs-meta);
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.legend span {
+  color: var(--muted-2);
+}
+
+.messageWrap {
+  position: relative;
+}
+
+.messageWrap .input {
+  min-height: 110px;
+}
+
+.counter {
+  position: absolute;
+  right: 0;
+  bottom: 30px;
+  font-size: 12px;
+  color: var(--muted-2);
+  font-variant-numeric: tabular-nums;
+  transition: color 0.3s var(--ease);
+}
+
+.counterWarn {
+  color: var(--accent-text);
+}
+
+.honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.submit {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  min-width: 56px;
+  padding: 0 30px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.4s var(--ease);
+}
+
+.submit:hover {
+  background: var(--accent-dark);
+}
+
+.round {
+  width: 56px;
+  padding: 0;
+}
+
+.submitLabel {
+  display: inline-flex;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+}
+
+.particle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: var(--accent);
+  pointer-events: none;
+  opacity: 0;
+  animation: burst 0.9s linear forwards;
+}
+
+@keyframes burst {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(var(--x1), var(--y1)) rotate(calc(var(--spin) * 0.5));
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--x2), var(--y2)) rotate(var(--spin));
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .particle {
+    display: none;
+  }
+}
+
+.fallback {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.fallback a {
+  color: var(--accent-text);
+}
+
+/* success panel */
+.thanks {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+  padding-block: 24px;
+}
+
+.thanksTitle {
+  font-family: var(--font-display), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: clamp(40px, 5vw, 72px);
+  line-height: 1.05;
+}
+
+.square {
+  display: inline-block;
+  width: 0.16em;
+  height: 0.16em;
+  margin-left: 0.08em;
+  background: var(--accent);
+}
+
+.thanksText {
+  font-size: 18px;
+  color: var(--muted);
+}
+
+.again {
+  justify-self: start;
+  padding-bottom: 2px;
+  font-size: 15px;
+  font-weight: 500;
+  border-bottom: 1px solid var(--line-2);
+  transition:
+    color 0.3s var(--ease),
+    border-color 0.3s var(--ease);
+}
+
+.again:hover {
+  color: var(--accent-text);
+  border-color: var(--accent);
+}
+
+@media (max-width: 767px) {
+  .pair {
+    grid-template-columns: 1fr;
+  }
+}

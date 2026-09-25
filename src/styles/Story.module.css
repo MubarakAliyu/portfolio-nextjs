@@ -1,0 +1,38 @@
+/* Story: sticky label on the left, big reading text on the right. */
+
+.section {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr);
+  gap: var(--gutter);
+  padding-block: clamp(96px, 12vw, 176px);
+}
+
+.label {
+  position: sticky;
+  top: 130px;
+  align-self: start;
+  font-size: var(--fs-meta);
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.label span {
+  color: var(--accent-text);
+}
+
+.text {
+  max-width: 30ch;
+  font-size: clamp(26px, 3.1vw, 46px);
+  line-height: 1.22;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 767px) {
+  .section {
+    grid-template-columns: 1fr;
+  }
+
+  .label {
+    position: static;
+  }
+}

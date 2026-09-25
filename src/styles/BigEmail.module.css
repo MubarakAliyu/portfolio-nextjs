@@ -1,0 +1,37 @@
+/* BigEmail: one-line display email that turns red on hover. */
+
+.section {
+  padding-block: clamp(24px, 4vw, 56px);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.email {
+  display: block;
+  max-width: 100%;
+  font-family: var(--font-display), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: min(7.8vw, 124px);
+  line-height: 1.05;
+  white-space: nowrap;
+  text-align: left;
+  transition: color 0.4s var(--ease);
+}
+
+.email:hover,
+.email:focus-visible {
+  color: var(--accent-text);
+}
+
+.mail {
+  display: inline-flex;
+  gap: 6px;
+  margin-top: 14px;
+  font-size: var(--fs-ui);
+  font-weight: 500;
+  color: var(--muted);
+  transition: color 0.3s var(--ease);
+}
+
+.mail:hover {
+  color: var(--text);
+}

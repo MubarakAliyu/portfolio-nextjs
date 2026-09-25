@@ -1,0 +1,48 @@
+/* NotFound: giant drifting 404 with a small tilted portrait beside it. */
+
+.page {
+  min-height: 100svh;
+  padding-top: clamp(140px, 16vw, 200px);
+  padding-bottom: 80px;
+}
+
+.stage {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.title {
+  font-family: var(--font-display), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: clamp(120px, 28vw, 420px);
+  line-height: 0.9;
+}
+
+.drop {
+  display: inline-flex;
+  font: inherit;
+  line-height: inherit;
+}
+
+.char {
+  display: inline-block;
+  will-change: transform;
+}
+
+.portrait {
+  width: clamp(140px, 14vw, 200px);
+  rotate: 8deg;
+}
+
+.line {
+  margin-top: 24px;
+  font-size: var(--fs-body);
+  color: var(--muted);
+}
+
+.home {
+  margin-top: 28px;
+}

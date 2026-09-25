@@ -1,0 +1,59 @@
+/* Stats: four columns split by vertical hairlines that draw in. */
+
+.section {
+  padding-block: clamp(80px, 10vw, 150px);
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-block: 1px solid var(--line);
+}
+
+.item {
+  position: relative;
+  display: grid;
+  gap: 12px;
+  padding: clamp(28px, 3vw, 44px) clamp(16px, 2vw, 28px);
+}
+
+.rule {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--line);
+  transform-origin: top;
+}
+
+.item:first-child .rule {
+  display: none;
+}
+
+.value {
+  font-family: var(--font-display), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: clamp(56px, 7vw, 112px);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.label {
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+@media (max-width: 767px) {
+  .list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .item:nth-child(3) .rule {
+    display: none;
+  }
+
+  .item:nth-child(n + 3) {
+    border-top: 1px solid var(--line);
+  }
+}

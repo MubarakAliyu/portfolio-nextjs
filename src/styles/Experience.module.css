@@ -1,0 +1,85 @@
+/* Experience: hairline rows with the ServicesList hover (red text + underline draw). */
+
+.section {
+  padding-block: clamp(80px, 10vw, 150px);
+}
+
+.list {
+  margin-top: clamp(32px, 4vw, 56px);
+  border-top: 1px solid var(--line);
+}
+
+.education {
+  margin-top: clamp(64px, 8vw, 110px);
+}
+
+.row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: baseline;
+  padding-block: 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.years {
+  font-size: var(--fs-meta);
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.main {
+  display: grid;
+  gap: 4px;
+  transition: transform 0.5s var(--ease);
+}
+
+.role {
+  font-size: clamp(18px, 1.6vw, 22px);
+  font-weight: 500;
+  transition: color 0.4s var(--ease);
+}
+
+.org {
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.line {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.underline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s var(--ease);
+}
+
+.row:hover .role {
+  color: var(--accent-text);
+}
+
+.row:hover .main {
+  transform: translateX(8px);
+}
+
+.row:hover .underline {
+  transform: scaleX(1);
+}
+
+@media (max-width: 767px) {
+  .row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}

@@ -1,0 +1,7 @@
+/* Layout: main sits above the page background; pages add their own spacing. */
+
+.main {
+  position: relative;
+  z-index: 1;
+  min-height: 60vh;
+}

@@ -1,0 +1,57 @@
+/* Faq: hairline rows with a + that turns into an ×. */
+
+.section {
+  padding-block: clamp(80px, 10vw, 150px);
+}
+
+.list {
+  margin-top: clamp(32px, 4vw, 56px);
+  border-top: 1px solid var(--line);
+}
+
+.item {
+  border-bottom: 1px solid var(--line);
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  min-height: 72px;
+  padding-block: 18px;
+  font-size: clamp(18px, 1.7vw, 24px);
+  font-weight: 500;
+  text-align: left;
+  transition: color 0.3s var(--ease);
+}
+
+.question:hover {
+  color: var(--accent-text);
+}
+
+.icon {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--line-2);
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: 300;
+  transition: transform 0.45s var(--ease);
+}
+
+.open .icon {
+  transform: rotate(45deg);
+}
+
+.answer {
+  max-width: 62ch;
+  padding-bottom: 24px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--muted);
+}
