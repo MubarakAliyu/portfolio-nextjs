@@ -1,0 +1,44 @@
+/* Custom cursor: an 84px disc scaled down to a 10px dot, plus an unblended label. */
+
+.dot {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10010; /* above the preloader (10000) and overlays */
+  width: 84px;
+  height: 84px;
+  margin: -42px 0 0 -42px;
+  border-radius: 50%;
+  background: var(--cursor);
+  mix-blend-mode: difference;
+  pointer-events: none;
+  will-change: transform;
+  transition: opacity 0.3s var(--ease);
+}
+
+.soft {
+  opacity: 0.55;
+}
+
+.label {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10011;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.label span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  translate: -50% -50%;
+  white-space: nowrap;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fff;
+}

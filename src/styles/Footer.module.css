@@ -1,0 +1,65 @@
+/* Footer: generous top padding for the CTA, then the small bottom bar. */
+
+.footer {
+  position: relative;
+  padding-top: clamp(64px, 9vw, 140px);
+  padding-bottom: 30px;
+  overflow: hidden;
+}
+
+.bar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 14px 32px;
+  margin-top: clamp(56px, 8vw, 120px);
+  padding-top: 26px;
+  font-size: var(--fs-ui);
+}
+
+.rule {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--line);
+  transform-origin: left;
+}
+
+.copy {
+  color: var(--muted);
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px clamp(18px, 2.6vw, 36px);
+}
+
+.link {
+  padding-bottom: 2px;
+  background-image: linear-gradient(var(--accent), var(--accent));
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 1px;
+  transition:
+    background-size 0.45s var(--ease),
+    color 0.3s var(--ease);
+}
+
+.link:hover,
+.link:focus-visible {
+  color: var(--accent-text);
+  background-size: 100% 1px;
+}
+
+/* Touch: tap targets of at least 44px. */
+@media (pointer: coarse) {
+  .link {
+    display: inline-block;
+    padding-block: 12px;
+  }
+}

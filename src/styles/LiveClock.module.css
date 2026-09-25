@@ -1,0 +1,13 @@
+/* LiveClock: small tabular meta text. */
+
+.clock {
+  font-size: var(--fs-meta);
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.clock time {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}

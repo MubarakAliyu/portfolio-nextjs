@@ -1,0 +1,6 @@
+/* ScrambleText: keeps width steady-ish while glyphs change. */
+
+.wrap {
+  display: inline-block;
+  font-variant-ligatures: none;
+}

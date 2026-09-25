@@ -1,0 +1,69 @@
+/* MobileMenu: full-screen panel under the header with huge display links. */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 899;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 120px var(--gutter) 32px;
+  background: var(--bg);
+}
+
+.links {
+  display: grid;
+}
+
+.mask {
+  display: block;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+}
+
+.row {
+  display: block;
+}
+
+.link {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding-block: 14px;
+  font-family: var(--font-display), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: clamp(48px, 15vw, 88px);
+  line-height: 1;
+  text-transform: uppercase;
+  transition: color 0.3s var(--ease);
+}
+
+.link em {
+  font-family: var(--font-sans), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+}
+
+.active,
+.link:hover {
+  color: var(--accent);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.toggles {
+  display: flex;
+  gap: 10px;
+}
+
+.email {
+  display: block;
+  margin-top: 6px;
+  font-size: var(--fs-ui);
+}

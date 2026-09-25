@@ -1,0 +1,33 @@
+/* ThemeToggle: outlined circle that warms up on hover. */
+
+.toggle {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line-2);
+  border-radius: 50%;
+  color: var(--muted);
+  transition:
+    color 0.3s var(--ease),
+    border-color 0.3s var(--ease);
+}
+
+.toggle:hover {
+  color: var(--text);
+  border-color: var(--text);
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+}
+
+/* Touch: tap targets of at least 44px. */
+@media (pointer: coarse) {
+  .toggle {
+    width: 44px;
+    height: 44px;
+  }
+}

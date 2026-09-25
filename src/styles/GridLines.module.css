@@ -1,0 +1,33 @@
+/* GridLines: 12 hairline columns across the full section width. */
+
+.grid {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  pointer-events: none;
+}
+
+.grid i {
+  border-right: 1px solid var(--grid);
+  transition: border-color 0.5s var(--ease);
+}
+
+.grid i:last-child {
+  border-right: 0;
+}
+
+@media (max-width: 767px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .grid i:nth-child(n + 5) {
+    display: none;
+  }
+
+  .grid i:nth-child(4) {
+    border-right: 0;
+  }
+}

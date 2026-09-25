@@ -1,0 +1,36 @@
+/* Marquee: full-bleed strip between two hairlines, bold uppercase Helvetica. */
+
+.marquee {
+  position: relative;
+  overflow: hidden;
+  padding-block: 22px;
+  border-block: 1px solid var(--line);
+  user-select: none;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: 32px;
+  padding-right: 32px;
+  font-size: clamp(28px, 3vw, 44px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--accent);
+}

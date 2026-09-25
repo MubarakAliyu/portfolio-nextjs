@@ -1,0 +1,128 @@
+/* Button: 48px pills with a fill that wipes up from the bottom on hover. */
+
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  height: 48px;
+  padding: 0 26px;
+  border-radius: 999px;
+  border: 1px solid var(--line-2);
+  overflow: hidden;
+  isolation: isolate;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  white-space: nowrap;
+  transition:
+    color 0.45s var(--ease),
+    border-color 0.45s var(--ease),
+    gap 0.45s var(--ease);
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  translate: 0 101%;
+  border-radius: inherit;
+  transition: translate 0.5s var(--ease);
+}
+
+.button:hover::before,
+.button:focus-visible::before {
+  translate: 0 0;
+}
+
+.label {
+  position: relative;
+}
+
+.arrow {
+  display: inline-block;
+  max-width: 0;
+  opacity: 0;
+  translate: -8px 0;
+  overflow: hidden;
+  transition:
+    max-width 0.45s var(--ease),
+    opacity 0.35s var(--ease),
+    translate 0.45s var(--ease);
+}
+
+.button:hover .arrow,
+.button:focus-visible .arrow {
+  max-width: 1.2em;
+  opacity: 1;
+  translate: 0 0;
+}
+
+.button:hover:has(.arrow),
+.button:focus-visible:has(.arrow) {
+  gap: 10px;
+}
+
+/* ↗ that flies out to the top-right while a new one arrives from the bottom-left. */
+.ne {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1.1em;
+  margin-left: 10px;
+  overflow: hidden;
+}
+
+.ne i {
+  position: absolute;
+  inset: 0;
+  font-style: normal;
+  line-height: 1.1;
+  transition: translate 0.5s var(--ease);
+}
+
+.ne i:last-child {
+  translate: -110% 110%;
+}
+
+.button:hover .ne i:first-child,
+.button:focus-visible .ne i:first-child {
+  translate: 110% -110%;
+}
+
+.button:hover .ne i:last-child,
+.button:focus-visible .ne i:last-child {
+  translate: 0 0;
+}
+
+/* Solid: accent pill that wipes to a darker red. */
+.solid {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-ink);
+}
+
+.solid::before {
+  background: var(--accent-dark);
+}
+
+.solid:hover {
+  border-color: var(--accent-dark);
+}
+
+/* Outline: hairline pill that fills with the text colour. */
+.outline {
+  color: var(--text);
+}
+
+.outline::before {
+  background: var(--text);
+}
+
+.outline:hover,
+.outline:focus-visible {
+  color: var(--bg);
+  border-color: var(--text);
+}
