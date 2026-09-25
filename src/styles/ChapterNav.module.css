@@ -1,0 +1,104 @@
+/* ChapterNav: sticky rail (desktop) / sticky pill strip (phones & tablets). */
+
+.nav {
+  position: sticky;
+  top: 130px;
+  align-self: start;
+}
+
+.list {
+  display: grid;
+  gap: 2px;
+}
+
+.link {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 8px 0 8px 16px;
+  font-size: var(--fs-ui);
+  color: var(--muted);
+  transition: color 0.3s var(--ease);
+}
+
+.link:hover,
+.active {
+  color: var(--text);
+}
+
+.marker {
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
+.num {
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted-2);
+}
+
+.active .num {
+  color: var(--accent-text);
+}
+
+@media (max-width: 1023px) {
+  .nav {
+    min-width: 0;
+    top: 64px;
+    z-index: 20;
+    margin-inline: calc(var(--gutter) * -1);
+    padding: 10px var(--gutter);
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(12px);
+    border-block: 1px solid var(--line);
+  }
+
+  .list {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .link {
+    min-height: 36px;
+    padding: 0 14px;
+    align-items: center;
+    border: 1px solid var(--line-2);
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  .active {
+    color: var(--bg);
+    border-color: var(--text);
+  }
+
+  .marker {
+    inset: -1px;
+    width: auto;
+    border-radius: 999px;
+    background: var(--text);
+  }
+
+  .num {
+    display: none;
+  }
+
+  .label {
+    position: relative;
+  }
+}
+
+/* Touch: tap targets of at least 44px. */
+@media (pointer: coarse) {
+  .link {
+    min-height: 44px;
+  }
+}

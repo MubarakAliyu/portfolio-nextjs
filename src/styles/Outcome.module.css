@@ -1,0 +1,45 @@
+/* Outcome: a big line of text and optional metrics. */
+
+.section {
+  padding-block: clamp(56px, 7vw, 110px);
+  border-top: 1px solid var(--line);
+}
+
+.eyebrow {
+  margin-bottom: 24px;
+  font-size: var(--fs-meta);
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.text {
+  max-width: 30ch;
+  font-size: clamp(24px, 2.6vw, 38px);
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+
+.metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px 64px;
+  margin-top: 48px;
+}
+
+.metrics dd {
+  font-family: var(--font-display), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: clamp(48px, 6vw, 88px);
+  line-height: 1;
+}
+
+.metrics div {
+  display: flex;
+  flex-direction: column;
+}
+
+.metrics dt {
+  order: 2;
+  margin-top: 8px;
+  font-size: var(--fs-meta);
+  color: var(--muted);
+}

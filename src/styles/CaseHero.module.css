@@ -1,0 +1,119 @@
+/* CaseHero: title block and meta row of a case study. */
+
+.hero {
+  padding-top: clamp(130px, 14vw, 200px);
+  padding-bottom: clamp(40px, 5vw, 72px);
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: clamp(24px, 3vw, 40px);
+  font-size: var(--fs-ui);
+}
+
+.back {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  font-weight: 500;
+  transition: color 0.3s var(--ease);
+}
+
+.backArrow {
+  display: inline-block;
+  transition: transform 0.45s var(--ease);
+}
+
+.back:hover {
+  color: var(--accent-text);
+}
+
+.back:hover .backArrow {
+  transform: translateX(-6px);
+}
+
+.number {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.title {
+  font-family: var(--font-display), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: var(--fs-display-l);
+  line-height: 0.98;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.mask {
+  display: inline-block;
+  overflow: hidden;
+  padding-top: 0.06em;
+  margin-top: -0.06em;
+  vertical-align: top;
+}
+
+.letter {
+  display: inline-block;
+}
+
+.meta {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0 var(--gutter);
+  margin-top: clamp(40px, 5vw, 72px);
+}
+
+.cell {
+  position: relative;
+  padding-top: 16px;
+}
+
+.rule {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--line);
+  transform-origin: left;
+}
+
+.cell dt {
+  font-size: var(--fs-meta);
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.cell dd {
+  margin-top: 6px;
+  font-size: clamp(16px, 1.3vw, 19px);
+  font-weight: 500;
+}
+
+.status {
+  color: var(--text);
+  font-size: inherit;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: clamp(28px, 3vw, 40px);
+}
+
+@media (max-width: 767px) {
+  .meta {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 24px;
+  }
+}
