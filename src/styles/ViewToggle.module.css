@@ -1,0 +1,47 @@
+/* ViewToggle: outlined pill group with a sliding solid highlight. */
+
+.group {
+  display: inline-flex;
+  gap: 2px;
+  padding: 4px;
+  border: 1px solid var(--line-2);
+  border-radius: 999px;
+}
+
+.option {
+  position: relative;
+  padding: 9px 18px;
+  border-radius: 999px;
+  font-size: var(--fs-ui);
+  font-weight: 500;
+  text-transform: capitalize;
+  color: var(--muted-2);
+  transition: color 0.3s var(--ease);
+}
+
+.option:hover {
+  color: var(--text);
+}
+
+.active,
+.active:hover {
+  color: var(--bg);
+}
+
+.pill {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--text);
+}
+
+.text {
+  position: relative;
+}
+
+/* Touch: tap targets of at least 44px. */
+@media (pointer: coarse) {
+  .option {
+    min-height: 44px;
+  }
+}

@@ -1,0 +1,65 @@
+/* Projects index: big title with a counting superscript, toggle, filters. */
+
+.page {
+  padding-top: clamp(140px, 16vw, 220px);
+  padding-bottom: clamp(64px, 8vw, 120px);
+}
+
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px 40px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4em;
+}
+
+.title {
+  font-size: clamp(56px, 11vw, 168px);
+}
+
+.count {
+  margin-top: 0.6em;
+  font-size: clamp(16px, 1.6vw, 22px);
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+  vertical-align: top;
+}
+
+.intro {
+  max-width: 520px;
+  margin-top: 18px;
+  font-size: var(--fs-body);
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.filters {
+  margin-top: clamp(32px, 4vw, 48px);
+}
+
+.rule {
+  display: block;
+  height: 1px;
+  margin: 24px 0 clamp(32px, 4vw, 48px);
+  background: var(--line-2);
+  transform-origin: left;
+}
+
+.empty {
+  display: grid;
+  justify-items: start;
+  gap: 24px;
+  padding-block: 80px;
+}
+
+.emptyTitle {
+  font-family: var(--font-display), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: var(--fs-title);
+  line-height: 1;
+}

@@ -1,0 +1,50 @@
+/* FilterPills: outlined pills; the active one is filled with the text colour. */
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pill {
+  position: relative;
+  min-height: 40px;
+  padding: 0 18px;
+  border: 1px solid var(--line-2);
+  border-radius: 999px;
+  font-size: var(--fs-ui);
+  font-weight: 500;
+  color: var(--muted);
+  transition:
+    color 0.3s var(--ease),
+    border-color 0.3s var(--ease);
+}
+
+.pill:hover {
+  color: var(--text);
+  border-color: var(--text);
+}
+
+.active,
+.active:hover {
+  color: var(--bg);
+  border-color: var(--text);
+}
+
+.fill {
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: var(--text);
+}
+
+.text {
+  position: relative;
+}
+
+/* Touch: tap targets of at least 44px. */
+@media (pointer: coarse) {
+  .pill {
+    min-height: 44px;
+  }
+}
