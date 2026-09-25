@@ -1,0 +1,30 @@
+{
+  "name": "mubarak-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "predev": "node scripts/build-media.mjs",
+    "dev": "next dev",
+    "prebuild": "node scripts/build-media.mjs",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "capture": "node scripts/capture-sites.mjs",
+    "media": "node scripts/build-media.mjs",
+    "seo": "node scripts/make-seo.mjs"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "framer-motion": "^13.4.0",
+    "lenis": "^1.3.26",
+    "next": "16.3.5",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "eslint": "^9",
+    "eslint-config-next": "16.3.5",
+    "playwright-core": "^1.63.0",
+    "sharp": "^0.35.4"
+  }
+}
