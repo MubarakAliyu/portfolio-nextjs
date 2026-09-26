@@ -83,9 +83,42 @@
   box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.6);
 }
 
+/* Shimmering placeholder until the photo has decoded. */
+.loading::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(100deg, transparent 20%, color-mix(in srgb, var(--text) 7%, transparent) 50%, transparent 80%);
+  background-size: 220% 100%;
+  animation: shimmer 1.8s linear infinite;
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 140% 0;
+  }
+  to {
+    background-position: -40% 0;
+  }
+}
+
+.reveal {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  display: block;
+}
+
 .img {
   object-fit: cover;
   transition: transform 1s var(--ease);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loading::before {
+    animation: none;
+  }
 }
 
 .photo:hover .img {

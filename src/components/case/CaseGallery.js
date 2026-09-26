@@ -10,6 +10,7 @@ import { ease } from "@/lib/motion";
 import { blurProps } from "@/lib/media";
 import { useLightbox } from "@/components/lightbox/LightboxProvider";
 import useMediaQuery from "@/hooks/useMediaQuery";
+import useNearViewport from "@/hooks/useNearViewport";
 import useReducedMotion from "@/hooks/useReducedMotion";
 import useViewport from "@/hooks/useViewport";
 import styles from "@/styles/CaseGallery.module.css";
@@ -26,25 +27,6 @@ function toRows(entries) {
     i += slice.length;
   }
   return rows;
-}
-
-// Starts loading well before the image scrolls into view (native lazy loading
-// only fires a few hundred pixels out, which on a slow connection is too late).
-function useNearViewport(ref, enabled) {
-  const [near, setNear] = useState(false);
-  useEffect(() => {
-    const el = ref.current;
-    if (!enabled || !el || near) return undefined;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries.some((e) => e.isIntersecting)) setNear(true);
-      },
-      { rootMargin: "1200px 0px" }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, [ref, enabled, near]);
-  return near;
 }
 
 // The skeleton (aspect-ratio box + shimmer) sits on the button itself, so it is

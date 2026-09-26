@@ -12,6 +12,7 @@ import { ease } from "@/lib/motion";
 import { blurProps, photo, seeded } from "@/lib/media";
 import { useLightbox } from "@/components/lightbox/LightboxProvider";
 import useMediaQuery from "@/hooks/useMediaQuery";
+import useNearViewport from "@/hooks/useNearViewport";
 import useReducedMotion from "@/hooks/useReducedMotion";
 import styles from "@/styles/Chapters.module.css";
 
@@ -24,14 +25,20 @@ const SHOTS = [
 
 const pad = (n) => String(n).padStart(2, "0");
 
-function Photo({ item, shot, index, local, onOpen, stacked }) {
+// The tile (with its skeleton) is always visible; only the photo inside wipes
+// in, so a chapter never shows an empty hole while its images load.
+function Photo({ item, shot, index, local, onOpen, stacked, eager }) {
   const drift = useTransform(local, (v) => `${v * shot.drift}vw`);
   const rotate = seeded(index * 7 + 3) * 8 - 4;
   const width = (shot.h * item.width) / item.height;
+  const ref = useRef(null);
+  const near = useNearViewport(ref, !eager);
+  const [loaded, setLoaded] = useState(false);
   return (
     <motion.button
+      ref={ref}
       type="button"
-      className={styles.photo}
+      className={clsx(styles.photo, !loaded && styles.loading)}
       style={
         stacked
           ? { rotate }
@@ -41,12 +48,28 @@ function Photo({ item, shot, index, local, onOpen, stacked }) {
       aria-label={`Open photo: ${item.alt}`}
       data-cursor="label"
       data-cursor-label="View"
-      initial={{ clipPath: "inset(100% 0% 0% 0%)" }}
-      whileInView={{ clipPath: "inset(0% 0% 0% 0%)" }}
-      viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 1.1, ease, delay: (index % 3) * 0.12 }}
     >
-      <Image src={item.src} alt={item.alt} fill sizes="(max-width: 767px) 45vw, 30vw" className={styles.img} {...blurProps(item)} />
+      <motion.span
+        className={styles.reveal}
+        initial={{ clipPath: "inset(100% 0% 0% 0%)" }}
+        whileInView={{ clipPath: "inset(0% 0% 0% 0%)" }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 1.1, ease, delay: (index % 3) * 0.12 }}
+      >
+        <Image
+          src={item.src}
+          alt={item.alt}
+          fill
+          sizes="(max-width: 767px) 32vw, 30vw"
+          loading={eager || near ? "eager" : "lazy"}
+          ref={(img) => {
+            if (img?.complete && img.naturalWidth > 0) setLoaded(true);
+          }}
+          onLoad={() => setLoaded(true)}
+          className={styles.img}
+          {...blurProps(item)}
+        />
+      </motion.span>
     </motion.button>
   );
 }
@@ -79,6 +102,7 @@ function Panel({ chapter, index, pos, photos, firstPhoto, onOpen, stacked }) {
             index={index * 3 + k}
             local={local}
             stacked={stacked}
+            eager={index === 0}
             onOpen={() => onOpen(firstPhoto + k)}
           />
         ))}
