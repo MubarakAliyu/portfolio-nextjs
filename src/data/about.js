@@ -7,6 +7,7 @@ import { projects } from "./projects";
 export const story = [
   "I'm Aliyu Mubarak, a product designer and software engineer from Sokoto, Nigeria. I design and build digital products end to end: the research, the flows, the identity, the interface, and the code that ships it.",
   "I run Starnova Labs, a tech studio making products, brands and digital experiences for startups and institutions, and I teach Software Engineering at Usmanu Danfodiyo University Sokoto, where I lecture Python programming and software construction. I'm finishing an M.Sc. in Computer Science, specialising in Software Engineering, at Woolf through GMC School of Technology.",
+  "The work travels further than I do: clients in Nigeria, Uganda, the United Kingdom and the United States — marketplaces, property platforms, fashion labels and creator tools.",
   "Design and engineering aren't two jobs to me. They're one practice. The medium changes; the goal doesn't: products that feel simple, human and genuinely useful to the people who rely on them.",
 ];
 
@@ -42,13 +43,13 @@ export const chapters = [
     year: "2025",
     title: "M.Sc., online",
     text: "Started a Master's in Computer Science, specialising in Software Engineering, with Woolf through GMC School of Technology.",
-    photos: [life(19), life(15), life(13)],
+    photos: [life(21), life(22), life(13)],
   },
   {
     year: "Now",
     title: "Teaching",
     text: "Lecturing, bootcamps and Kids in Tech, where the next generation builds.",
-    photos: [life(17), life(2), life(10)],
+    photos: [life(23), life(24), life(17)],
   },
 ];
 
@@ -73,6 +74,10 @@ export const polaroids = [
   { src: life(8), caption: "Pair design" },
   { src: life(3), caption: "Quiet hours" },
   { src: life(17), caption: "Class is in" },
+  { src: life(21), caption: "TODO: caption" }, // TODO: Mubarak to caption the four newest photos
+  { src: life(22), caption: "TODO: caption" }, // TODO
+  { src: life(23), caption: "TODO: caption" }, // TODO
+  { src: life(24), caption: "TODO: caption" }, // TODO
 ];
 
 // Quotes for the rotator above the inspirations. TODO: swap for Mubarak's favourites.

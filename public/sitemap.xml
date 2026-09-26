@@ -2,77 +2,87 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://portfolio-nextjs-psi-liart.vercel.app</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://portfolio-nextjs-psi-liart.vercel.app/projects</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://portfolio-nextjs-psi-liart.vercel.app/about</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://portfolio-nextjs-psi-liart.vercel.app/contact</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://portfolio-nextjs-psi-liart.vercel.app/projects/afrivendor</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://portfolio-nextjs-psi-liart.vercel.app/projects/lyvads</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://portfolio-nextjs-psi-liart.vercel.app/projects/hi-b-greenbox</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://portfolio-nextjs-psi-liart.vercel.app/projects/kids-in-tech</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://portfolio-nextjs-psi-liart.vercel.app/projects/cuzoo</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://portfolio-nextjs-psi-liart.vercel.app/projects/zariya</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://portfolio-nextjs-psi-liart.vercel.app/projects/hausalearn</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://portfolio-nextjs-psi-liart.vercel.app/projects/edustack</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://portfolio-nextjs-psi-liart.vercel.app/projects/nexora</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://portfolio-nextjs-psi-liart.vercel.app/projects/iwan-buy</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://portfolio-nextjs-psi-liart.vercel.app/projects/savera</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://portfolio-nextjs-psi-liart.vercel.app/projects/inner-mirror</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://portfolio-nextjs-psi-liart.vercel.app/projects/ekobuja</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <priority>0.7</priority>
   </url>
 </urlset>

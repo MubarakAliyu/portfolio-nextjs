@@ -13,6 +13,8 @@ import life from "./life.generated.json";
 
 export const FILTERS = ["All", "Product", "Brand", "Web", "EdTech", "Mobile", "Systems"];
 
+// Clients now span Nigeria, Uganda, the UK and the US.
+
 export const STATUS = {
   live: "Live",
   "in-progress": "In progress",
@@ -26,6 +28,84 @@ const FALLBACK_COVER = "/images/life/float5.jpg";
 const me = (role) => [{ name: "Aliyu Mubarak (me)", role }];
 
 export const projects = [
+  // Under NDA except for publicly available information: the case study uses
+  // only live-site screenshots and public brand marks. The app, admin and
+  // custom-orders screens sit in ../_pending-permission/afrivendor/ until the
+  // client's written consent comes through.
+  {
+    slug: "afrivendor",
+    title: "Afrivendor",
+    year: "2025", // TODO: confirm the start year (brand guidelines are dated November 2025)
+    category: "Marketplace",
+    tags: ["Product", "Brand", "Mobile"],
+    filters: ["Product", "Brand", "Mobile", "Web", "Systems"],
+    status: "live",
+    client: "Afrivendor Ltd (WindowShop AI), United Kingdom",
+    summary:
+      "A marketplace connecting African and UK service vendors with customers: brand, customer and vendor apps, a web app, an admin dashboard and a custom-orders system.",
+    roles: "Product Design, Branding, Mobile & Web App Design",
+    description: [
+      "Afrivendor is where someone books a trusted vendor — beauty, catering, photography, home trades — and where that vendor runs the work that follows. It spans two audiences on four surfaces: customer and vendor mobile apps, customer and vendor web apps, and an admin dashboard that oversees the marketplace.",
+      "The heart of it is a custom-orders system: a structured service-request flow with request states and side-by-side proposal comparison, booking and escrow integration, and, on the vendor side, an RFS request dashboard, a smart-matching interface with compatibility scoring, a proposal builder, negotiation chat and payment tracking. Admin tools cover request monitoring, vendor-matching oversight and escrow monitoring. It all runs on one design system, delivered as high-fidelity designs, interactive prototypes and user-flow diagrams.",
+      "The work is under NDA except for what is already public, so this case study shows the live site and the brand. The product screens are available on request.",
+    ],
+    team: me("Product Designer & Brand Designer"),
+    timeline: "", // TODO: add the engagement dates
+    links: { live: "https://www.afrivendor.com" },
+    accent: "#BC6D39",
+    palette: ["#BC6D39", "#231305", "#BCAEA6", "#422104"],
+    typefaces: ["Unbounded", "Unageo"],
+    stack: ["Figma", "Design system", "Prototyping"],
+    challenge:
+      "Booking an African service vendor usually means *a referral, a phone call and hoping for the best* — and vendors have no way to price bespoke work. A marketplace has to hold two very different jobs at once: *a customer who wants it handled*, and *a vendor running a business on it*.",
+    process: [
+      { title: "Two products, one system", text: "Mapped the customer and vendor journeys separately, then built one design system so the apps, the web apps and the admin dashboard stay one product." },
+      { title: "The custom-orders flow", text: "Designed a structured service request: the customer describes the job, the request moves through defined states, and proposals come back to be compared side by side." },
+      { title: "Matching and proposals", text: "A vendor-side RFS dashboard with smart matching and compatibility scoring, a proposal builder, negotiation chat and payment tracking." },
+      { title: "Money that feels safe", text: "Booking and escrow integration so payment is held until the work is delivered, with admin-side escrow monitoring." },
+      { title: "Brand", text: "An identity built on the letter A as an arc and a bridge: bronze and deep earth brown, Unbounded with Unageo, carried across the app, the site and print." },
+    ],
+    solution:
+      "One marketplace where a customer can *describe a job and compare real proposals*, a vendor can *quote, negotiate and get paid* in the same place, and admins can *watch requests, matching and escrow* from a single dashboard.",
+    outcome: { text: "Live at afrivendor.com, with the apps announced for iOS and Android.", metrics: [] }, // TODO: add real outcome numbers once the client shares them
+  },
+  // Same client as Inner Mirror (Jeje Awotomo).
+  {
+    slug: "lyvads",
+    title: "Lyvads",
+    year: "2025", // TODO: confirm year
+    category: "Brand",
+    tags: ["Brand", "Product"],
+    filters: ["Brand", "Product", "Web"],
+    status: "live",
+    client: "Lyvads, United States",
+    summary:
+      "The brand identity for a creator-collaboration platform: a spark mark, a six-colour system and a 20-page guide, built for influencers and the brands that hire them.",
+    roles: "Brand Identity | Strategy, Logo System, Guidelines, Collateral",
+    description: [
+      "Lyvads connects people to creators and influencers for personalised video and branded content — set a rate, make the content, get paid, with watermark protection and escrowed funds behind it.",
+      "The identity had to work for both sides of that exchange: playful enough for creators, credible enough for the brands paying them. The mark is a spark of overlapping shapes that reads as a burst of ideas, drawn so it can sit on a dark app screen, a pink social tile or a billboard without losing itself.",
+      "Second identity for this client, after the Inner Mirror family.",
+    ],
+    team: me("Brand Designer"),
+    timeline: "", // TODO: add the project dates
+    links: { live: "https://lyvads.com" },
+    accent: "#8A5CFF",
+    palette: ["#8A5CFF", "#231C34", "#FF3489", "#FFD027", "#FF5C53", "#F0EBFF"],
+    typefaces: ["Gabarito"],
+    stack: ["Illustrator", "Figma", "InDesign"],
+    challenge:
+      "Creator platforms either look like *a toy* or like *a bank*. Lyvads needed one identity that made a creator want to post and made a brand comfortable *sending money through it*.",
+    process: [
+      { title: "Audit & strategy", text: "Positioned Lyvads against Cameo, influence.co and memmo, then wrote the internal and external brand strategy from the gap." },
+      { title: "Sketches & marks", text: "Drew the spark mark by hand first, then refined its construction and clear space so it holds at app-icon size." },
+      { title: "A system with range", text: "Six tones — innovative purple, fun pink, joyful yellow, creative coral, dark and light — so the brand can be loud on social and calm in the product." },
+      { title: "Collateral", text: "Gabarito throughout, plus patterns, social templates, stationery, merch and a 20-page guide." },
+    ],
+    solution:
+      "A mark that reads as *a spark of collaboration*, a palette with *a register for every surface*, and a guide that keeps the brand steady from *the app screen to the billboard*.",
+    outcome: { text: "Delivered: brand guide, logo system and collateral; live at lyvads.com.", metrics: [] },
+  },
   // TODO: Mubarak to confirm
   {
     slug: "hi-b-greenbox",

@@ -1,4 +1,106 @@
 {
+  "afrivendor": {
+    "cover": {
+      "src": "/images/projects/afrivendor/cover.jpg",
+      "width": 1600,
+      "height": 1200,
+      "blurDataURL": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAACwAQCdASoQAAwAAsBMJYwCdAEO/C4wAP75DSwgTiAAhuL0+5HXKfIN5WB10g+LlCbsDAAA"
+    },
+    "gallery": [
+      {
+        "src": "/images/projects/afrivendor/gallery/01.jpg",
+        "width": 1800,
+        "height": 1237,
+        "blurDataURL": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAABQAgCdASoQAAsAAsBMJbACdAYubvtg6a9xUxAA/vCtFcWS/6WyI4OEQ9abn0rz5eMEePpkB3c4VyHVvksb0bzsksen8g9kjWHOtjiergxlSaPHHy2nM2NpIBmuUOWuK42gHn0IFkay58uL4AA="
+      },
+      {
+        "src": "/images/projects/afrivendor/gallery/02.jpg",
+        "width": 1800,
+        "height": 1237,
+        "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAQCdASoQAAsAAsBMJZwC7AEPAqsCZAAA/vZ2/aLSbe1UXKHwnEgHjCJMv3dsZjiCNDz4k/jmc/6dgaIJILBGp0f4pgAA"
+      },
+      {
+        "src": "/images/projects/afrivendor/gallery/03.jpg",
+        "width": 1800,
+        "height": 1237,
+        "blurDataURL": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAwAgCdASoQAAsAAsBMJYwCdAYtVvqdL60aAAD+nAcw0icdfed6wMe//I3uO10ckprZkHL+9uTHagbQ0qeG9M/XIxUY+T/1QFpfmXbddFrl0kBoxkLs3h597G8+PQ2LUdYMwAAA"
+      },
+      {
+        "src": "/images/projects/afrivendor/gallery/04.jpg",
+        "width": 1800,
+        "height": 1237,
+        "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAwAgCdASoQAAsAAsBMJQBOgMXr5FFLEL3EAAD+9nQ06A1vjQwvEcLJ7ih6QGTKoBzJUNqlW6LP88eLdQApI5mqI2/Ek4mbWPOhnW0kGQDw9osfzcCDwmEquMM9HIFvkAA="
+      },
+      {
+        "src": "/images/projects/afrivendor/gallery/05.jpg",
+        "width": 1800,
+        "height": 1237,
+        "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAQCdASoQAAsAAsBMJZwAAvmGDNzvgAD++XUU0MlfrUfiwYWPqdH/v2YA60c+6VzO+QmY/lu21bRw7Le/BdL+XCJF6TGij6PA4AAA"
+      },
+      {
+        "src": "/images/projects/afrivendor/gallery/06.jpg",
+        "width": 1800,
+        "height": 1237,
+        "blurDataURL": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAAAwAgCdASoQAAsAAsBMJYgCdEf/geeLaVLL0AD+4pg39bYfLIAaze257Sodc3qdAQKN7oCkWx+Tz875wXYw4XSLyH00rh+K7lMj3GFbAo1yd4kO8gcMVHgQu39FU/0ailvQUHIe5nrzj3+6GTxBKaizRIXWEHHglVbYucDbuygmEAAA"
+      },
+      {
+        "src": "/images/projects/afrivendor/gallery/07.jpg",
+        "width": 1800,
+        "height": 1237,
+        "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoQAAsAAsBMJYwCdAEN5Wu+vkAA/vi5ccXDbInm7FYsQzQWIG16tdCppglTBjAB8MahyYBBGHbBuuBAitXtrDlBHN4AAA=="
+      },
+      {
+        "src": "/images/projects/afrivendor/gallery/08.jpg",
+        "width": 1800,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAADQAgCdASoQAAsAAsBMJbACdLoA4wAp5TFI1z05k4oAAP7onc14kyeVjW4emu/qDucrtEdOU1mPiz/jZzUADMgb3qhbta1ujb4gycw1DY8SpwGdScMXgxtkkiJVzjbzcYiF4EU40tY+SnFmyhPckNHvAoaAJIsf3PB4VIAA"
+      },
+      {
+        "src": "/images/projects/afrivendor/gallery/09.jpg",
+        "width": 1800,
+        "height": 1100,
+        "blurDataURL": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAADQAQCdASoQAAoAAsBMJZgCdAELQWmwAAD++N9+DTmNSJ+Pw9E2YfJ83VZxTWvYFFgDWlFL9K61pdOjA/SBnSmIFv0L2O1+a3YJy9VrgheCKzSlChvPmreVcFLG8ErqBhS6cQAA"
+      },
+      {
+        "src": "/images/projects/afrivendor/gallery/10.jpg",
+        "width": 1800,
+        "height": 1000,
+        "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADQAQCdASoQAAkAAsBMJZQCw7EVtjhygAD+9kuefvJ4skdZS9FqqTjmsXAj/qOiad6Y/V9RdcilSXuETrPKaKjQK0qg2r7s18HqkVTGQAA="
+      },
+      {
+        "src": "/images/projects/afrivendor/gallery/11.jpg",
+        "width": 1800,
+        "height": 1000,
+        "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADwAQCdASoQAAkAAsBMJZwC7AD5PIngp0AA/vAb4LLpS2ASbKf3Ca3tY5XNxQUj+Fc/txzdjGc5/Ge0IKzK9779cD3rcb5ystMMlHEJ7kcm42Bi2uYAAA=="
+      },
+      {
+        "src": "/images/projects/afrivendor/gallery/12.jpg",
+        "width": 1800,
+        "height": 1247,
+        "blurDataURL": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAwAgCdASoQAAsAAsBMJYgC7AD0p2+K4u2jEAD++FcKx4CqzBivB8iHX7gOqKnsazkcuumS1vu/yC40uBg+nL4ZEwIhE/GLs1YfUtJm4+MQqWxpzaeaoYKjL8VbrRJXCmrr3a7r7Yc6oAAA"
+      },
+      {
+        "src": "/images/projects/afrivendor/gallery/13.jpg",
+        "width": 1800,
+        "height": 920,
+        "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAACwAQCdASoQAAgAAsBMJQBOgCEpCUGAAP713di+87MNOo5Ryf1+tgiYmnR49BPuhhiKmt69AGKq03Fw2X+JP51qtTwlYhxWJ8ptk7fl4edkskt34AA="
+      }
+    ],
+    "screens": {
+      "desktop": {
+        "src": "/images/projects/afrivendor/screens/desktop.jpg",
+        "width": 1440,
+        "height": 6964,
+        "blurDataURL": "data:image/webp;base64,UklGRm4BAABXRUJQVlA4IGIBAADQBwCdASoQAE0APtFepk0oJSOiLMgBABoJQBOmdTgxsAN4urtmuBpL2jhNwy7aOZtW4vx3Zp9OnxxBzotXMnaT/fCcWNJzQAD+8iIdxM86pdOA6wyJpHQkhH57FGMWJUUD5+/fAiy3BwQ7DhGfpUPCOdsFtzETH4nk0tPGUoo+Bb12fvWXMmBtYqAb+DRLXe4Tf6/FdEOW3oGInIY3e3u7fzmbbv1Wchi89ehTwomOSt6qTVKGjxfH6zBLj8NwYm4FamizWvt9y/YtHUvXF83QWJO65+jm3vUlBGA57f/TMKb/qlKHmtRNuex2hv73fwbxj2/lwqHOsBuCIQybpXwuBB3cEkU4nhLjxuRb8JcbxPUUZl6nhPqdYMGM2NqFFn7I68XwMwceXaVAXWao4sTBn4h2r82X/4kBGls+51zRP/6IaUFX93s/ICZ1zF2+onbJqCpXw0jTcXIrbL8bejXAAAA="
+      },
+      "mobile": {
+        "src": "/images/projects/afrivendor/screens/mobile.jpg",
+        "width": 780,
+        "height": 7000,
+        "blurDataURL": "data:image/webp;base64,UklGRnQCAABXRUJQVlA4IGgCAABQDACdASoQAJAAPtFSo02oJCMiMdM8AQAaCWgAvRO0iirO4QG2b/h94Vyjn1x/a8b9RXLV0gTTSEYb+ErBhdgTEP4hmGRB8sBQTGNGnaFWo1n/6HBpiLlR3KOVc17HG4Q5WpB/IjFr+UPqAAD++jpjHU1q2IbAvpXB2AYEEpCE8LOo8Oc0H1ACS7/IdhN/oNAMZCJ5GQZj0drONqHTBhIHwsoFQL+u5kNTW3JGb+2GKhZgJT49QYRU7AXbvrG1hlr9IuIf3m7RcFj0HqYSJHBaPMn0RBW1qcSTkbVdglEJmRHz/DJKbLY8hg3RuIRm/rXiaVv+KCcO5X+tvDpWwANM7b3pvejY/XFFcUzXNye2zTcwC2AhMbo1wdaamBHhs661/MzALEqWBVbq7729nkH5JrcQenHWwE8kBxfjXBP9xwIfbC68Kf781o/ZFWwXeQHdgNF3dnB9vz/lv4FqP4PFR7oMTn/ph7z3bwlMkF+1mQHKvvK52hzgIetOlDprcKNPOiFChTXdYvpBSjVcKqQc2g+s1o7eQJa9EtRGhAV1yMfy8LPaOgRY96C744MCa9ZGluCDhrJnsA1xrmC8h5ZpyJH3ZbfE+3Y3Ou/Yzo07Bl2wS4FqZixSJjfPlPJ2/Zvzr8NnCTB183C4W5bTfPQbQnuw8b4HPqbaPzCOKyRJRtQoh3Igirqo8PMco9pOP+XtfOgQa9Z3wO8ENOk9HyTSiOVRTabrdn3FQN/0EnucfnWQ2uU4nq3rK1PMvqEWh3IgPm7aPw3iVYcFPm2HoR2Zz0CmEMIfuFbZ7g99SPN6JwixY2SeUAAA"
+      }
+    }
+  },
   "cuzoo": {
     "cover": {
       "src": "/images/projects/cuzoo/cover.jpg",
@@ -802,6 +904,114 @@
         "width": 821,
         "height": 2745,
         "blurDataURL": "data:image/webp;base64,UklGRlIBAABXRUJQVlA4IEYBAACQBQCdASoQADYAPslQn0unpKKhsAwA8BkJZgC3vagR/R79aeiVCKpW4/D3rqaNvxztNlIHIAD+/SvXNwT8hfZF2hybH1u4ZS83+7lhG4Gv/RcRmsfv5G/6b1igr36mz+MDhQZJyLGnh2qZ1da3bmDcwYQEVHJhBaYgc8Ivcec194E1fSrb72JEYJlXFiGv/qQPQ//AaVNIEMC/ef2q3Mn5n4qwg83JNie7vYF7VXwH32w6Yhpc7o1xnxt3F86reMayvNI4JS3yTavYefsTrEajk6GyLo87jbJgvE4dhFxl+B5Z7CPIwKpcN1BtkK92HUrrIZy4cyvgwyozunsPzR4O+3z2Q+BrjVKXVIFk2NJ6bgetYyfnfC7NmzAnSZyH17/Zjvraf2/DbXw3YiIZdsOqOqi51JF/qsBkc0Z+kTbee8uSKdUAAA=="
+      }
+    }
+  },
+  "lyvads": {
+    "cover": {
+      "src": "/images/projects/lyvads/cover.jpg",
+      "width": 1600,
+      "height": 1200,
+      "blurDataURL": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACQAQCdASoQAAwAAsBMJagCdAChBAAA7PRtW2hLR6g5/+Wf/7Lf+W/arZO8QAAA"
+    },
+    "gallery": [
+      {
+        "src": "/images/projects/lyvads/gallery/01.jpg",
+        "width": 1800,
+        "height": 1235,
+        "blurDataURL": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAADwAQCdASoQAAsAAsBMJbACdAEOZoFDhAAA/psTOESA6oM/uC1/ncwM51qwjN3H1CLM+WG1onEnH3e7n8vS8lv8JmzloRFF6FvJ8oCT0WjCtbaFDZsTNinYZHxUQgeyM8v8nkfU3vOnyrizX5o0KJ+q/uzj1Bx3jSE724CAAAA="
+      },
+      {
+        "src": "/images/projects/lyvads/gallery/02.jpg",
+        "width": 1800,
+        "height": 780,
+        "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQAgCdASoQAAcAAsBMJQBdgCH53fzht5YAAP738cPM4CK5d7u7+/8uL+I8g7lAHf3O2agKmm+EMvUc1wFjTN73MFkbvyNhQ2aeuKFzn+v1blF3ydkAAA=="
+      },
+      {
+        "src": "/images/projects/lyvads/gallery/03.jpg",
+        "width": 1800,
+        "height": 1385,
+        "blurDataURL": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADQAQCdASoQAAwAAsBMJYwAAuX5cHKrcAD+0p5wir/nUtXG0+ZY6NeDmFiUW24T472f8V520VUk13v5JZ+k4BIE+Hb6/y+6vHVbh3eUMxMtnZzytRSQZK7uMEkQgv9CZTOQAA=="
+      },
+      {
+        "src": "/images/projects/lyvads/gallery/04.jpg",
+        "width": 1800,
+        "height": 1385,
+        "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADwAQCdASoQAAwAAsBMJbACdADwGV3FhgAA/vdCujRZD8F4X3hl0LRl0zTfYW8Zo9yQunlvFt3iYaZqfYBDWTQJBslSUptTkfj180OKP/iTiG3cH/zQ0Km/ydsaAA=="
+      },
+      {
+        "src": "/images/projects/lyvads/gallery/05.jpg",
+        "width": 1800,
+        "height": 780,
+        "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADwAQCdASoQAAcAAsBMJZQAAvdBt+PhWpAA/vJx8vbqX0zIp9+RglFxqzdaZ+eSCtjtxQxlsQjFBygnEehL1aK5qxklNVbqMJYWGPN7sXAAAA=="
+      },
+      {
+        "src": "/images/projects/lyvads/gallery/06.jpg",
+        "width": 1800,
+        "height": 900,
+        "blurDataURL": "data:image/webp;base64,UklGRioAAABXRUJQVlA4IB4AAABQAQCdASoQAAgAAsBMJYwABDOAAP7zpP9sneIAAAA="
+      },
+      {
+        "src": "/images/projects/lyvads/gallery/07.jpg",
+        "width": 1800,
+        "height": 1000,
+        "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADwAQCdASoQAAkAAsBMJZgCdAD0ixzBbwAA/vf8B45OJP2ly8ijELHSEeALJBWfUovbqq8B5z9t/kkBtouDIPNFLxFca5saLjFUsT/yAAAAAA=="
+      },
+      {
+        "src": "/images/projects/lyvads/gallery/08.jpg",
+        "width": 1800,
+        "height": 1000,
+        "blurDataURL": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAwAgCdASoQAAkAAsBMJbACdAYtzy1BMuOEWAD+LgG8+ykv2eJqChQ0G2J6di1NSiWz9JQZuSZR+aJdOtLkhAfte9UITnLMcSlF9Kt+S3Xx4BZ/1Kn/+CT5K9m//cv2QAAAAA=="
+      },
+      {
+        "src": "/images/projects/lyvads/gallery/09.jpg",
+        "width": 1800,
+        "height": 1357,
+        "blurDataURL": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAAAQAgCdASoQAAwAAsBMJYgCdAEO/9V943LAAP6cBvNjmNm23HEgq2mPCzeQFv3BSAB35tMeRTt3J5mkFZgBSM8H14rhpLKm8tlp6Y7t0bKwaUHqM6UaA3OjH++hOkm3x2xO5M/ZC0+FXt+pSADJh01X3T9nNUbfAAA="
+      },
+      {
+        "src": "/images/projects/lyvads/gallery/10.jpg",
+        "width": 1800,
+        "height": 920,
+        "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADwAQCdASoQAAgAAsBMJYwCw7EQygYsrkAA/tz/4DKxMRzIlRcS7cilZN0CTONvNvwzL7Rt0/Z5EcAkSx598FcUTUImfAAZk6U2lvWoiuqwBlAAAAA="
+      },
+      {
+        "src": "/images/projects/lyvads/gallery/11.jpg",
+        "width": 1800,
+        "height": 217,
+        "blurDataURL": "data:image/webp;base64,UklGRjIAAABXRUJQVlA4ICYAAABQAQCdASoQAAIAAsBMJYwABDOAAP7xUivZzXunaFHCz+dj2uAAAA=="
+      },
+      {
+        "src": "/images/projects/lyvads/gallery/12.jpg",
+        "width": 1800,
+        "height": 1237,
+        "blurDataURL": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAAAwAgCdASoQAAsAAsBMJZQAD5GwdKqwHFSAsAD+yrGq+9ncZJsCqkZGsc/J1zStrZZ9S6OoQY/cEfV84dOZvUO1DEdOqxn3UPF73D+FTv6898A7qV28DslVERQ1zkufEitRU5uhQAA="
+      },
+      {
+        "src": "/images/projects/lyvads/gallery/13.jpg",
+        "width": 1800,
+        "height": 1237,
+        "blurDataURL": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAABQAgCdASoQAAsAAsBMJbACdDiAAVHz87FPbyAA/vdWZ5f+XRmX69I1lPdaWd2RlQQinXQg521dIVI0d9CiaUCiHYhB6/MJxtYNsiZFnrF0tFap4XgN358Q15fi6N3P2QbDrNkTRXQoAA=="
+      },
+      {
+        "src": "/images/projects/lyvads/gallery/14.jpg",
+        "width": 1800,
+        "height": 1200,
+        "blurDataURL": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAABwAgCdASoQAAsAAsBMJbACsEf/i14eCZ09nGZAAP7rwDUc+MwnjBCe9J9cx5Gd9yloksJh5d4UVKrm+yUZaYSYbd9bB80H7bMxTyZTo8OvqqvpPBAG0FKfX9mH24Rh8wT9XstlxfyXJv/Qivr3cy0w6xTKNAAA"
+      }
+    ],
+    "screens": {
+      "desktop": {
+        "src": "/images/projects/lyvads/screens/desktop.jpg",
+        "width": 1440,
+        "height": 7000,
+        "blurDataURL": "data:image/webp;base64,UklGRlwBAABXRUJQVlA4IFABAAAQBwCdASoQAE4APsFUoUunpSMhszqsAPAYCWUAyCerqiCt696RoVmH5DqTyyoiHd3/ufVAjzueiCK52b6OxW/AIAD+88y5I+RnZNZAHRWyqkMjaW5+5WaUlA4PT7/WZ/jntOtbQEFf4g65sQ/TEx4PT+H+voJ1J28LjZJsZfc1Yl0X1Gdib/L+FnesONLPjn7GNn8WL/EOK8pmGOkvzUzjsrbmD5D+6rxeNemnyMpcOzaA1ABnRH0ArEqWfpIS4268BPzkaHoyieflwWI2GWq35p8lXJmG2HQzyBLvAOhL4MHZ3opYE3d+6R34n5rZFttyuZeEppBTOiBcnrnutGnHauUZhGhHXrOLqQwDk2l3dYsedUc+uaQOk9hpEn47fsRO8YO9oZTtOfN4gciLwwSVneo6s49gbmjGD1SGI79Mxz0DtKwZRQBH7een2hL8QAA="
+      },
+      "mobile": {
+        "src": "/images/projects/lyvads/screens/mobile.jpg",
+        "width": 780,
+        "height": 7000,
+        "blurDataURL": "data:image/webp;base64,UklGRgYCAABXRUJQVlA4IPoBAAAwCwCdASoQAJAAPr1KoEunJCMhtVqtUOAXiWUAzU+tDwr/EY+brcTDNECqf3Vpe2OZoddW22DaobwdUvO43vUzpr+xBR0mN1TJkok5DcZvNnbpYJSftwL0h/oJ9mIqjyHcgAD+9R9h9avCggvafUPMuCwgj3lemx+iP+J60PbxGUIjKCmKV5HXbxVak0XgbqGm4zi2slH4leTzWyo2eLEbxcm5wwDH3066tzBCbYXvyiW5w8jewQr+HmoEnSbhOru91vJjS8KABd9BT1RY87Snwl/CzdSjsjtwzmq82X4unO7v59lz6f/acm5wsr+qt4qqlXIqA4uAdZ6WCImOEN7nUUIw1uR1KHRjoSlvZbp/mZzbvwYLfcHFoeaF9bSN3Kw46rDANEAKSk4Qij6miSu0Pe6qmM9bdjUT4AVLq5X5xE82if0M3zWRYPWiDM6zBhFldfV9SLYiHxG83CodmrS+6QTngPlMytuJHrugY52kD0W8v2HyNMfywdVCP5RveULB8O7oj/CWQKu6fsuTDlQwt2SUUSkscvarQ/UpTOf4AED2Ru4128IZRkzoYT/TghhaBwcUNtv3EBsK8LcOAPmffk4vMWlShR1dvHXoGt2Eg5VfJSZ5ax3fxLncoUzxbhIVBuTafQonhCy3f6X8EPWHRB266rH8VWAAAA=="
       }
     }
   },
