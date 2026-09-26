@@ -392,9 +392,9 @@
   "hi-b-greenbox": {
     "cover": {
       "src": "/images/projects/hi-b-greenbox/cover.png",
-      "width": 998,
-      "height": 698,
-      "blurDataURL": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4WAoAAAAQAAAADwAACgAAQUxQSDsAAAABX0AmYNE/4NoMlw4RkTtqoSaSpGjroguRQEq8OMHD4gA9SEDkj4KI/k+AZ5IsHUubBXxrs4hlqpLUBgBWUDggQAAAAPABAJ0BKhAACwACwEwlsAJ0Bipco0EuIAD54i8a2u9Uj8H+l9DeesmoAPX5+QNGkO0Jenf/2s3vpXxy7wZFkAA="
+      "width": 2400,
+      "height": 1800,
+      "blurDataURL": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAABwAQCdASoQAAwAAsBMJaACdAFAAAD+vR9cgzEf3YA7acOk56i/i34N/Qpj+T9EYAA="
     },
     "gallery": [
       {
@@ -539,7 +539,7 @@
         "src": "/images/projects/inner-mirror/gallery/06.jpg",
         "width": 2400,
         "height": 1510,
-        "blurDataURL": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAABwAgCdASoQAAoAAsBMJYwCdAYvNvuINrzkNWAAAP6cNDzYQJ+wsdS5+ROKfMjaCmzRpricdyRCPIElter9AJMr+9oGncu35D58MXtnitFcWfr3BN6zm9HLNo4vPi4yVqn4+tbfpV9xTqC3mgAAAA=="
+        "blurDataURL": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAAAQAgCdASoQAAoAAsBMJZQCdAD0qtxtECcAAP73Efk3WXckUwBTro4qj/Mf5tLkjmnNNLegAAA="
       },
       {
         "src": "/images/projects/inner-mirror/gallery/07.jpg",

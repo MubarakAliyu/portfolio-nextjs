@@ -28,37 +28,87 @@ function toRows(entries) {
   return rows;
 }
 
-function Figure({ entry, onOpen, sizes, style, className }) {
+// Starts loading well before the image scrolls into view (native lazy loading
+// only fires a few hundred pixels out, which on a slow connection is too late).
+function useNearViewport(ref, enabled) {
+  const [near, setNear] = useState(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (!enabled || !el || near) return undefined;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) setNear(true);
+      },
+      { rootMargin: "1200px 0px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [ref, enabled, near]);
+  return near;
+}
+
+// The skeleton (aspect-ratio box + shimmer) sits on the button itself, so it is
+// visible while the image loads *and* while the reveal is still clipped — the
+// slot is never empty page background. Only the image wipes in.
+function Figure({ entry, onOpen, sizes, style, className, eager = false, cap = true }) {
   const { item, index } = entry;
+  const ref = useRef(null);
+  const near = useNearViewport(ref, !eager);
+  const [loaded, setLoaded] = useState(false);
   return (
-    <motion.button
+    <button
+      ref={ref}
       type="button"
-      className={clsx(styles.figure, className)}
-      style={style}
+      className={clsx(styles.figure, !loaded && styles.loading, className)}
+      style={{ "--ar": `${item.width} / ${item.height}`, ...(cap ? { maxWidth: item.width } : null), ...style }}
       onClick={() => onOpen(index)}
       aria-label={`Open ${item.alt} in the viewer`}
       data-cursor="label"
       data-cursor-label="View"
-      initial={{ clipPath: "inset(100% 0% 0% 0%)" }}
-      whileInView={{ clipPath: "inset(0% 0% 0% 0%)" }}
-      viewport={{ once: true, amount: 0.15 }}
-      transition={{ duration: 1.1, ease }}
     >
-      <Image src={item.src} alt={item.alt} width={item.width} height={item.height} sizes={sizes} className={styles.img} {...blurProps(item)} />
-    </motion.button>
+      <motion.span
+        className={styles.reveal}
+        initial={{ clipPath: "inset(100% 0% 0% 0%)" }}
+        whileInView={{ clipPath: "inset(0% 0% 0% 0%)" }}
+        viewport={{ once: true, amount: 0.15 }}
+        transition={{ duration: 1.1, ease }}
+      >
+        <Image
+          src={item.src}
+          alt={item.alt}
+          width={item.width}
+          height={item.height}
+          sizes={sizes}
+          loading={eager || near ? "eager" : "lazy"}
+          // A cached image can finish before hydration attaches onLoad, so the
+          // ref catches the already-complete case and clears the skeleton too.
+          ref={(img) => {
+            if (img?.complete && img.naturalWidth > 0) setLoaded(true);
+          }}
+          onLoad={() => setLoaded(true)}
+          className={styles.img}
+          {...blurProps(item)}
+        />
+      </motion.span>
+    </button>
   );
 }
+
+// The container is ~78vw of the viewport: a full row fills it, a 2-up row is
+// (78vw - 24px) / 2 ≈ 38vw, and the offset row is 64% of it ≈ 50vw. Asking for
+// the row's real width stops the browser fetching a variant that has to be
+// upscaled (or a 1920/3840 one it never needs).
+const ROW_SIZES = {
+  full: "(max-width: 767px) 100vw, (max-width: 1023px) 92vw, 78vw",
+  two: "(max-width: 767px) 100vw, 38vw",
+  offset: "(max-width: 767px) 100vw, 50vw",
+};
 
 function Editorial({ entries, onOpen }) {
   return toRows(entries).map((row, r) => (
     <div key={r} className={clsx(styles.row, styles[row.kind])}>
       {row.slice.map((entry) => (
-        <Figure
-          key={entry.item.src}
-          entry={entry}
-          onOpen={onOpen}
-          sizes={row.kind === "full" ? "(max-width: 1023px) 100vw, 75vw" : "(max-width: 767px) 100vw, 40vw"}
-        />
+        <Figure key={entry.item.src} entry={entry} onOpen={onOpen} sizes={ROW_SIZES[row.kind]} eager={entry.index < 2} />
       ))}
     </div>
   ));
@@ -74,7 +124,8 @@ function PinnedStrip({ entries, onOpen }) {
   const still = isPhone || reduced;
 
   const h = Math.round(vh * 0.62);
-  const widths = entries.map(({ item }) => Math.round((h * item.width) / item.height));
+  // Never lay a strip item out wider than its source, or it renders upscaled.
+  const widths = entries.map(({ item }) => Math.min(item.width, Math.round((h * item.width) / item.height)));
   const trackWidth = widths.reduce((a, b) => a + b, 0) + GAP * (entries.length - 1);
   const distance = Math.max(0, trackWidth - columnWidth);
 
@@ -93,8 +144,8 @@ function PinnedStrip({ entries, onOpen }) {
     return (
       <div ref={ref}>
         <div className={styles.swipe} ref={stage}>
-          {entries.map((entry) => (
-            <Figure key={entry.item.src} entry={entry} onOpen={onOpen} sizes="80vw" className={styles.swipeItem} />
+          {entries.map((entry, i) => (
+            <Figure key={entry.item.src} entry={entry} onOpen={onOpen} sizes="80vw" className={styles.swipeItem} eager={i < 2} cap={false} />
           ))}
         </div>
       </div>
@@ -113,6 +164,8 @@ function PinnedStrip({ entries, onOpen }) {
               sizes={`${widths[i]}px`}
               className={styles.stripItem}
               style={{ width: widths[i], height: h }}
+              eager={i < 2}
+              cap={false}
             />
           ))}
         </motion.div>
