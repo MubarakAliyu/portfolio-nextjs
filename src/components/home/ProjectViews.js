@@ -15,7 +15,10 @@ import ProjectCard from "./ProjectCard";
 import styles from "@/styles/ProjectViews.module.css";
 
 // One `sizes` for every card view so switching views reuses the same file.
-const CARD_SIZES = "(max-width: 767px) 100vw, 50vw";
+// Measured: a card is ~416px wide at 1440 and ~350px at 390, not the half
+// viewport the old value claimed — which made the browser fetch a variant
+// roughly twice the size it needed.
+const CARD_SIZES = "(max-width: 767px) 92vw, (max-width: 1023px) 46vw, 30vw";
 
 function toColumns(projects, count = 3) {
   const cols = Array.from({ length: count }, () => []);

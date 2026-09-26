@@ -27,12 +27,12 @@ const pad = (n) => String(n).padStart(2, "0");
 
 // The tile (with its skeleton) is always visible; only the photo inside wipes
 // in, so a chapter never shows an empty hole while its images load.
-function Photo({ item, shot, index, local, onOpen, stacked, eager }) {
+function Photo({ item, shot, index, local, onOpen, stacked, eager, preload = false }) {
   const drift = useTransform(local, (v) => `${v * shot.drift}vw`);
   const rotate = seeded(index * 7 + 3) * 8 - 4;
   const width = (shot.h * item.width) / item.height;
   const ref = useRef(null);
-  const near = useNearViewport(ref, !eager);
+  const near = useNearViewport(ref, !eager && !preload);
   const [loaded, setLoaded] = useState(false);
   return (
     <motion.button
@@ -61,7 +61,8 @@ function Photo({ item, shot, index, local, onOpen, stacked, eager }) {
           alt={item.alt}
           fill
           sizes="(max-width: 767px) 32vw, 30vw"
-          loading={eager || near ? "eager" : "lazy"}
+          // The first chapter photo is preloaded from the head, at high priority.
+          {...(preload ? { preload: true, fetchPriority: "high" } : { loading: eager || near ? "eager" : "lazy" })}
           ref={(img) => {
             if (img?.complete && img.naturalWidth > 0) setLoaded(true);
           }}
@@ -103,6 +104,7 @@ function Panel({ chapter, index, pos, photos, firstPhoto, onOpen, stacked }) {
             local={local}
             stacked={stacked}
             eager={index === 0}
+            preload={index === 0 && k === 0}
             onOpen={() => onOpen(firstPhoto + k)}
           />
         ))}

@@ -32,10 +32,10 @@ function toRows(entries) {
 // The skeleton (aspect-ratio box + shimmer) sits on the button itself, so it is
 // visible while the image loads *and* while the reveal is still clipped — the
 // slot is never empty page background. Only the image wipes in.
-function Figure({ entry, onOpen, sizes, style, className, eager = false, cap = true }) {
+function Figure({ entry, onOpen, sizes, style, className, eager = false, cap = true, preload = false }) {
   const { item, index } = entry;
   const ref = useRef(null);
-  const near = useNearViewport(ref, !eager);
+  const near = useNearViewport(ref, !eager && !preload);
   const [loaded, setLoaded] = useState(false);
   return (
     <button
@@ -61,7 +61,9 @@ function Figure({ entry, onOpen, sizes, style, className, eager = false, cap = t
           width={item.width}
           height={item.height}
           sizes={sizes}
-          loading={eager || near ? "eager" : "lazy"}
+          // The first image is preloaded from the document head and fetched at
+          // high priority; `preload` and `loading` can't both be set.
+          {...(preload ? { preload: true, fetchPriority: "high" } : { loading: eager || near ? "eager" : "lazy" })}
           // A cached image can finish before hydration attaches onLoad, so the
           // ref catches the already-complete case and clears the skeleton too.
           ref={(img) => {
@@ -90,7 +92,14 @@ function Editorial({ entries, onOpen }) {
   return toRows(entries).map((row, r) => (
     <div key={r} className={clsx(styles.row, styles[row.kind])}>
       {row.slice.map((entry) => (
-        <Figure key={entry.item.src} entry={entry} onOpen={onOpen} sizes={ROW_SIZES[row.kind]} eager={entry.index < 2} />
+        <Figure
+          key={entry.item.src}
+          entry={entry}
+          onOpen={onOpen}
+          sizes={ROW_SIZES[row.kind]}
+          preload={entry.index === 0}
+          eager={entry.index < 2}
+        />
       ))}
     </div>
   ));
