@@ -4,10 +4,10 @@ import Hero from "@/components/home/Hero";
 import Marquee from "@/components/ui/Marquee";
 import WorkSection from "@/components/home/WorkSection";
 import ServicesList from "@/components/home/ServicesList";
-import { projects, withMedia } from "@/data/projects";
+import { FEATURED, getProject, withMedia } from "@/data/projects";
 import { services } from "@/data/services";
 
-const featured = projects.slice(0, 3).map(withMedia);
+const featured = FEATURED.map(getProject).filter(Boolean).map(withMedia);
 
 export default function Home() {
   return (

@@ -513,6 +513,10 @@ export const projects = [
   },
 ];
 
+// The three shown on the home page, in this order. The rest of /projects keeps
+// the array order above, so changing this doesn't reshuffle the work index.
+export const FEATURED = ["hi-b-greenbox", "afrivendor", "cuzoo"];
+
 export const getProject = (slug) => projects.find((p) => p.slug === slug) || null;
 
 const describeLocal = (src) => life[src] ?? { src, width: 1600, height: 2000 };
